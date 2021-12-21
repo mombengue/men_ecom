@@ -12,7 +12,15 @@ router.get('/', (req, res) => {
     res.render('pages/home', { articles, categories });
 });
 
-router.get('/se-connecter', (req, res) => {
+router.get('/articles', (req, res) => {
+    res.render('pages/article');
+});
+
+router.get('/a-propos', (req, res) => {
+    res.render('pages/apropos');
+});
+
+router.get('/connexion', (req, res) => {
     res.render('pages/login');
 });
 
