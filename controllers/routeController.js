@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/articles', (req, res) => {
-    res.render('pages/article');
+    res.render('pages/articles');
 });
 
 router.get('/a-propos', (req, res) => {
