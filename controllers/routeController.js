@@ -12,6 +12,11 @@ router.get('/', (req, res) => {
     res.render('pages/home', { articles, categories });
 });
 
+router.get('/se-connecter', (req, res) => {
+    res.render('pages/login');
+});
+
+
 /* router.get('/register', (req,res) => {
 	res.render('pages/register');
 });
@@ -25,9 +30,6 @@ router.post('/register', (req,res) => {
         });
 });
 
-router.get('/login', (req, res) => {
-    res.render('pages/login');
-});
 
 router.post('/login', passport.authenticate('local', 
     {successRedirect: '/panier', failureRedirect: '/login'})
