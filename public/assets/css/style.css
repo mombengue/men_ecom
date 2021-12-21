@@ -7,7 +7,7 @@
 }
 
 .primary-text {
-  color: #ff324d !important;
+  color: #be9b57 !important;
 }
 
 .secondary-text {
@@ -31,7 +31,7 @@
 }
 
 .bg-primary {
-  background-color: #ff324d !important;
+  background-color: #be9b57 !important;
 }
 
 .bg-secondary {
@@ -127,17 +127,17 @@
 }
 
 .link-hover:hover {
-  color: #ff324d !important;
+  color: #be9b57 !important;
   z-index: 9;
 }
 
 .hover-btn:hover {
   color: #ffffff !important;
-  background: #ff324d !important;
+  background: #be9b57 !important;
 }
 
 .form-focus:focus {
-  border-color: #ff324d;
+  border-color: #be9b57;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 50, 77, 0.4);
           box-shadow: 0 0 0 0.2rem rgba(255, 50, 77, 0.4);
 }
@@ -147,7 +147,7 @@
 }
 
 .w3s-pagination li .active {
-  background-color: #ff324d !important;
+  background-color: #be9b57 !important;
   color: #ffffff !important;
 }
 
@@ -161,7 +161,7 @@ p {
 }
 
 .active {
-  color: #ff324d !important;
+  color: #be9b57 !important;
 }
 
 .curency-d,
@@ -182,7 +182,7 @@ p {
 
 .w3s-primary-btn {
   color: #ffffff;
-  background: #ff324d;
+  background: #be9b57;
   padding: 12px 35px;
   text-decoration: none;
   text-transform: uppercase;
@@ -193,7 +193,7 @@ p {
 }
 
 .w3s-primary-btn:hover {
-  background: #fc1030;
+  background: #be933f;
   color: #ffffff;
 }
 
@@ -353,7 +353,7 @@ p {
 }
 
 .w3s-exclusive-product-section .mixitup-control-active {
-  color: #ff324d !important;
+  color: #be9b57 !important;
 }
 
 .w3s-tranding-banner-section .md-divider {
@@ -382,7 +382,7 @@ p {
 
 .w3s-newsletter-section .newsletter-input {
   width: 70%;
-  border-color: #ff324d;
+  border-color: #be9b57;
   border-right: none;
 }
 
@@ -410,14 +410,14 @@ p {
   display: inline-block;
   padding: 20px;
   line-height: 24px;
-  border: 2px solid #ff324d;
+  border: 2px solid #be9b57;
   font-size: 38px;
   -webkit-transition: background-color .5s ease-in;
   transition: background-color .5s ease-in;
 }
 
 .w3s-contact-info-section .w3s-address-info-box:hover .w3s-address-icon {
-  background: #ff324d;
+  background: #be9b57;
   color: #ffffff !important;
 }
 
@@ -427,7 +427,7 @@ p {
 }
 
 .w3s-filter .active {
-  background: #ff324d;
+  background: #be9b57;
   color: #ffffff !important;
 }
 
