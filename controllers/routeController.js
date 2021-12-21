@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const article = require('../models/articleModels');
 const categorie = require('../models/categorieModels');
-const user = require('../models/userModels');
+/* const user = require('../models/userModels'); */
 
 router.get('/', (req, res) => {
     var articles = article.getArticles;
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     res.render('pages/home', { articles, categories });
 });
 
-router.get('/register', (req,res) => {
+/* router.get('/register', (req,res) => {
 	res.render('pages/register');
 });
 
@@ -36,7 +36,7 @@ router.post('/login', passport.authenticate('local',
 router.get('/logout', (req,res) => {
 	req.logout();
 	res.redirect('/');
-});
+}); */
 
 
-module.exports = route;
+module.exports = router;
