@@ -1,0 +1,533 @@
+// color variables
+$primary: #ff324d;
+$secondary: #687188;
+$dark: #292b2c;
+$pure-dark: #202325;
+$success: #388e3c;
+$warning: #ff9f00;
+$white: #ffffff;
+$lightBlue: #f4f9fc;
+$redon: #fff1f1;
+$gray: #f7f8fb;
+
+// Font variables
+$poppins: "Poppins", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+// Fonts family
+.font-poppins {
+  font-family: $poppins;
+}
+
+.font-roboto {
+  font-family: $roboto;
+}
+
+// text colors
+.primary-text {
+  color: $primary !important;
+}
+
+.secondary-text {
+  color: $secondary !important;
+}
+
+.dark-text {
+  color: $dark !important;
+}
+
+.success-text {
+  color: $success !important;
+}
+
+.warning-text {
+  color: $warning !important;
+}
+
+.white-text {
+  color: $white !important;
+}
+
+// background colors
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.bg-dark {
+  background-color: $dark !important;
+}
+
+.bg-pure-dark {
+  background-color: $pure-dark;
+}
+
+.bg-success {
+  background-color: $success !important;
+}
+
+.bg-warning {
+  background-color: $warning !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-light-blue {
+  background-color: $lightBlue !important;
+}
+
+.bg-redon {
+  background-color: $redon !important;
+}
+
+.bg-gray {
+  background-color: $gray !important;
+}
+
+// Font-sizes
+.font-12 {
+  font-size: 0.75rem;
+}
+.font-14 {
+  font-size: 0.875rem;
+}
+.font-16 {
+  font-size: 1rem;
+}
+.font-18 {
+  font-size: 1.125rem;
+}
+.font-20 {
+  font-size: 1.25rem;
+}
+.font-22 {
+  font-size: 1.375rem;
+}
+.font-24 {
+  font-size: 1.5rem;
+}
+.font-28 {
+  font-size: 1.75rem;
+}
+.font-30 {
+  font-size: 1.875rem;
+}
+.font-32 {
+  font-size: 2rem;
+}
+.font-40 {
+  font-size: 2.50rem;
+}
+.font-60 {
+  font-size: 3.75rem;
+}
+// Font weight
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+
+// Hover effects
+.link-hover:hover {
+  color: $primary !important;
+  z-index: 9;
+}
+
+.hover-btn:hover {
+  color: $white !important;
+  background: $primary !important;
+}
+
+// Focus color
+.form-focus:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 0.2rem rgba(255, 50, 77, 0.4);
+}
+
+// cursor
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Pagination 
+.w3s-pagination {
+  li {
+    .active {
+      background-color: $primary !important;
+      color: $white !important;
+    }
+  }
+}
+
+// ================== Site css ==========
+
+// Basic setup
+body {
+  font-family: $poppins;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.active {
+  color: $primary !important;
+}
+
+.curency-d,
+.lan-d {
+  width: 16%;
+}
+
+.curency-d:focus,
+.lan-d:focus {
+  box-shadow: none;
+}
+
+.focus-none:focus {
+  box-shadow: none !important;
+}
+
+// Button
+.w3s-primary-btn {
+  color: $white;
+  background: transparent;
+  border: 1.5px solid $primary;
+  padding: 12px 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+}
+
+.w3s-primary-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: $primary;
+  transition: 0.3s all;
+  animation-delay: 5s;
+  z-index: -1;
+}
+
+.w3s-primary-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: $primary;
+  z-index: -1;
+  transition: 0.3s all;
+  animation-delay: 5s;
+}
+
+.w3s-primary-btn:hover:before {
+  width: 0;
+}
+
+.w3s-primary-btn:hover:after {
+  width: 0;
+}
+
+.w3s-primary-btn:hover {
+  text-decoration: none;
+  color: $primary;
+}
+
+.w3s-dark-btn {
+  outline: 0;
+  border: 0;
+  color: $white;
+  background: $dark;
+  padding: 12px 35px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  z-index: 9;
+  border-right: 2px solid $white;
+}
+
+.w3s-dark-btn:hover {
+  background-color: $pure-dark;
+}
+
+// Breadcrumb 
+.w3s-breadcrumb {
+  padding: 70px 0;
+
+  .active {
+    color: #6c757d !important;
+  }
+}
+
+// Sticky menu
+.w3s-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  border-bottom: 1px solid #ddd;
+}
+
+// Slider
+.w3s-slider-section {
+  .w3s-slider-item {
+    min-height: 32rem;
+    background: #777;
+    color: #fff;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0;
+  }
+
+  .carousel-control-next:hover,
+  .carousel-control-prev:hover {
+    opacity: 1;
+  }
+
+  .carousel-caption {
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+  }
+
+  // animation
+  h1 {
+    animation: show-left-to-right 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translateX(-100%);
+  }
+
+  h2 {
+    animation: show-left-to-right 1s;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translateX(-100%);
+  }
+
+  .w3s-primary-btn {
+    animation: show-left-to-right 1.5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translateX(-300%);
+  }
+}
+
+// Slider Text Animation
+@keyframes show-left-to-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: .4;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Banner
+.w3s-shop-banner-section {
+  .w3s-banner-info {
+    top: 50%;
+    right: 0;
+    padding: 20px;
+    width: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// Product
+.w3s-product-action-btn {
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+  animation-delay: 0.3s;
+}
+.w3s-product-card:hover .w3s-product-action-btn {
+  display: block !important;
+  opacity: 1;
+}
+.w3s-product-card:hover .w3s-product-img img {
+  opacity: 0.8;
+}
+
+.w3s-product-badge {
+  top: 10px;
+  left: 10px;
+  z-index: 9;
+}
+
+// Exclusive products
+.w3s-exclusive-product-section {
+  .mixitup-control-active {
+    color: $primary !important;
+  }
+}
+
+// Tranding Banner
+.w3s-tranding-banner-section  {
+  .md-divider {
+    height: 50px;
+  }
+  .tranding-img {
+    margin-top: -90px;
+  }
+}
+
+// Feature Products
+.w3s-feature-product-section {
+  .owl-prev {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+  }
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+  }
+}
+
+// News letter
+.w3s-newsletter-section {
+  .newsletter-input {
+    width: 70%;
+    border-color: $primary;
+    border-right: none;
+  }
+  .newsletter-btn {
+    width: 30%;
+    border-right: 2px solid $white !important;
+    border-color: $dark;
+
+  }
+
+  .form-control-lg {
+    padding: .7rem 1rem !important;
+  }
+}
+
+// Footer
+.w3s-footer {
+  .w3s-footer-widgets {
+    .w3s-footer-description {
+      width: 80%;
+    }
+  }
+
+  .w3s-copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+// Contact page 
+.w3s-contact-info-section {
+  .w3s-address-icon {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    padding: 20px;
+    line-height: 24px;
+    border: 2px solid $primary;
+    font-size: 38px;
+    transition: background-color .5s ease-in;
+  }
+
+  .w3s-address-info-box:hover .w3s-address-icon {
+    background: $primary;
+    color: $white !important;
+  }
+}
+
+// FAQ page
+.w3s-faq-section {
+  .accordion-button:not(.collapsed) {
+    color: $dark !important;
+    background-color: transparent !important;
+  }
+}
+
+// shop page 
+.w3s-filter {
+  .active {
+    background: $primary;
+    color: $white !important;
+  }
+}
+
+
+
+// Responsive
+
+/* -------------------------------------------------
+  max-width: 768px
+---------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  .w3s-tranding-banner-section {
+    .w3s-tranding-banner-info {
+      h2 {
+        font-size: 1.875rem;
+      }
+    }
+
+  }
+
+  .w3s-newsletter-section {
+    h2 {
+      font-size: 1.75rem;
+    }
+    .newsletter-input {
+      width: 65%;
+    }
+
+    .newsletter-btn {
+      width: 35%;
+    }
+  }
+}
+/* -------------------------------------------------
+  max-width: 480px
+---------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+  .w3s-tranding-banner-section {
+    .tranding-img {
+      margin-top: 30px;
+    }
+  }
+
+  .w3s-testimonial-section {
+    .carousel-item {
+      p {
+        width: 90% !important;
+        font-size: 14px;
+      }
+    }
+  }
+}
