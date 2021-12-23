@@ -14,14 +14,14 @@ const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
 
-const users = []
+/* const users = [] */
 
-const initializePassport = require('./passport-config')
+/* const initializePassport = require('./passport-config')
 initializePassport(
   passport,
   email => users.find(user => user.email === email),
   id => users.find(user => user.id === id)
-)
+) */
 
 dbConfig.dbconnexion()
 
