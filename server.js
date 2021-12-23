@@ -8,11 +8,12 @@ const dbConfig = require("./config/dbConfig");
 const mainRouter = require('./router/mainRouter');
 const adminRouter = require('./router/adminRouter');
 
-/* const User = require('../database/userDatabase'); */
-
-/* const passport = require('passport');
-const LocalStrategy = require('passport-local');
-const passportLocalMongoose = require('passport-local-mongoose'); */
+const passport = require('passport');
+const initializePassport = require('./passport-config')
+initializePassport(
+    passport, 
+    email => users.find(user => user.email === email) 
+    )
 
 dbConfig.dbconnexion();
 
@@ -21,13 +22,6 @@ app.set('views', __dirname + '/views');
 app.set('view engine','ejs');
 
 app.use(express.static(__dirname + '/public'));
-
-/* app.use(passport.initialize());
-app.use(passport.session());
-
-passport.use( new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser()); */
 
 // Route
 app.use('/', mainRouter);
