@@ -22,6 +22,12 @@ router.get('/connexion', (req, res) => {
     res.render('pages/login');
 });
 
+/* router.post('/connexion', (req, res, next), passport.authenticate('local', {
+    successRedirect: '/admin/',
+    failureRedirect: '/connexion',
+    failureFlash: true
+})); */
+
 
 
 module.exports = router;
