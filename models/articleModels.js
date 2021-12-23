@@ -1,14 +1,8 @@
 const Article = require('../database/articleDatabase');
 
-const getArticles =  async (req, res) => {
-    try {
-        const articles = await Article.find();
-    
-        res.send(articles);
-        
-    } catch (error) {
-        console.log(error.message);
-    }
+const getArticles =  async () => {
+    let articles = await Article.find();
+    return articles;
 }; 
 
 const getArticle = async (req, res) => {
@@ -17,7 +11,7 @@ const getArticle = async (req, res) => {
         
         const article = await Article.find({"_id" : id});
         
-        res.send(article);
+        return article;
         
     } catch (error) {
         console.log(error.message);
@@ -30,7 +24,7 @@ const createArticle = async (req, res) => {
 
         const articles = await Article.find();
     
-        res.send(articles);
+        return articles;
         
     } catch (error) {
         console.log(error.message);

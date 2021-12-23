@@ -66,70 +66,24 @@
       </div>
       <div class="row">
         <!-- Products -->
-        <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
-          <div class="w3s-product-card card">
-            <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
-              <img src="assets/img/product_img1.jpg" class="img-fluid" alt="product" />
-              <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
-                 <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
+        <% articles.forEach(article => { %>
+          <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
+            <div class="w3s-product-card card">
+              <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
+                <!-- <img src="<%= article.image %>" class="img-fluid" alt="product" /> -->
+                <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
+                  <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
+                </div>
               </div>
-            </div>
-            <div class="w3s-product-info bg-white p-3">
-              <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize">Blue Dress For Woman</h6>
-              <div class="w3s-product-price">
-                  <span class="primary-text font-16 fw-bold">$45.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
-          <div class="w3s-product-card card">
-            <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
-              <img src="assets/img/product_img2.jpg" class="img-fluid" alt="product" />
-              <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
-                <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
-             </div>
-            </div>
-            <div class="w3s-product-info bg-white p-3">
-              <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize">Lether Gray Tuxedo</h6>
-              <div class="w3s-product-price">
-                <span class="primary-text font-16 fw-bold">$55.00</span>
+              <div class="w3s-product-info bg-white p-3">
+                <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize"><%= article.name %></h6>
+                <div class="w3s-product-price">
+                    <span class="primary-text font-16 fw-bold">$45.00</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
-          <div class="w3s-product-card card">
-            <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
-              <img src="assets/img/product_img3.jpg" class="img-fluid" alt="product" />
-              <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
-                <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
-             </div>
-            </div>
-            <div class="w3s-product-info bg-white p-3">
-              <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize">woman full sliv dress</h6>
-              <div class="w3s-product-price">
-                <span class="primary-text font-16 fw-bold">$68.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
-          <div class="w3s-product-card card">
-            <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
-              <img src="assets/img/product_img4.jpg" class="img-fluid" alt="product" />
-              <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
-                <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
-             </div>
-            </div>
-            <div class="w3s-product-info bg-white p-3">
-              <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize">light blue Shirt</h6>
-              <div class="w3s-product-price">
-                <span class="primary-text font-16 fw-bold">$95.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% }); %> 
         <!-- !Products -->
       </div>
     </div>

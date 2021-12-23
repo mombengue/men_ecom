@@ -1,12 +1,13 @@
 const Categorie = require('../database/categorieDatabase');
 
-const getCategories =  async (req, res) => {
+const getCategories =  async () => {
     try {
-        const categories = await Categorie.find();
+        let categories = await Categorie.find();
     
-        res.send(categories);
+        return categories;
         
-    } catch (error) {
+    } 
+    catch (error) {
         console.log(error.message);
     }
 }; 
