@@ -47,19 +47,19 @@ router.get('/connexion', (req, res) => {
     res.render('pages/login');
 });
 
-router.post('/connexion', checkNotAuthenticated, passport.authenticate('local', {
+router.post('/connexion', passport.authenticate('local', {
         successRedirect: '/admin',
         failureRedirect: '/connexion',
         failureFlash: true
     })
 )
 
-/* function checkAuthenticated(req, res, next) {
+function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
       return next()
     }
     res.redirect('/connexion')
-} */
+} 
   
 function checkNotAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
