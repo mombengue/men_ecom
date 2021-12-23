@@ -70,7 +70,7 @@
           <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
             <div class="w3s-product-card card">
               <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
-                <!-- <img src="<%= article.image %>" class="img-fluid" alt="product" /> -->
+                <img src="<%= article.image %>" class="img-fluid" alt="product" />
                 <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
                   <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
                 </div>
@@ -78,7 +78,7 @@
               <div class="w3s-product-info bg-white p-3">
                 <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize"><%= article.name %></h6>
                 <div class="w3s-product-price">
-                    <span class="primary-text font-16 fw-bold">$45.00</span>
+                    <span class="primary-text font-16 fw-bold"><%= article.prix %></span>
                 </div>
               </div>
             </div>

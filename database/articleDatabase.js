@@ -10,7 +10,7 @@ const articleSchema = new mongoose.Schema({
         required:true
     },
     prix:{
-        type:Number,
+        type:String,
         required:true
     },
     categorie : [

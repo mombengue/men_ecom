@@ -1,4 +1,6 @@
 const express = require('express')
+const app = express()
+
 const router = express.Router()
 const article = require('../models/articleModels')
 const categorie = require('../models/categorieModels')
@@ -10,12 +12,21 @@ const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
 
+app.use(flash())
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(methodOverride('_method'))
 
 const initializePassport = require('../passport-config')
 initializePassport(
-  passport,
-  email => user.find(user => user.email === email),
-  id => user.find(user => user.id === id)
+    passport,
+    email => user.find(user => user.email === email),
+    id => user.find(user => user.id === id)
 )
 
 router.get('/', async (req, res) => {
@@ -37,7 +48,7 @@ router.get('/connexion', (req, res) => {
 });
 
 router.post('/connexion', checkNotAuthenticated, passport.authenticate('local', {
-        successRedirect: '/admin/',
+        successRedirect: '/admin',
         failureRedirect: '/connexion',
         failureFlash: true
     })
