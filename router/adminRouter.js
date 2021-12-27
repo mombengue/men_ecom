@@ -21,6 +21,10 @@ router.get('/articles', (req, res) => {
     res.render('pages/admin/articles');
 });
 
+router.post('/articles', (req, res) => {
+    console.log(req.name);
+});
+
 router.get('/categories', (req, res) => {
     res.render('pages/admin/categories');
 });
