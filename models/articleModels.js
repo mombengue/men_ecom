@@ -1,8 +1,13 @@
 const Article = require('../database/articleDatabase');
 
-const getArticles =  async () => {
-    let articles = await Article.find();
-    return articles;
+const getArticles =  async (req, res) => {
+    try {
+        let articles = await Article.find();
+        return articles;
+    } 
+    catch (error) {
+        console.log(error.message);
+    }
 }; 
 
 const getArticle = async (req, res) => {
