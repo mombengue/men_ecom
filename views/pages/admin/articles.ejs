@@ -40,8 +40,10 @@
                   <label for="name" class="mb-2">Nom de l'article</label>
                   <input type="text" name="name" id="name" class="form-control form-control-lg font-16" />
                   <label for="password" class="mt-4 mb-2">Categorie</label>
-                  <select id="categorie" name="categorie" class="form-control form-control-lg font-16">
-                    <option value=""></option>
+                  <select id="categorie" name="categorie" placeholder="Selectionner une categorie" class="form-control form-control-lg font-16">
+                    <% categories.forEach(categorie => { %>
+                      <option value="<%= categorie._id %>"><%= categorie.name %></option>
+                    <% }); %> 
                   </select>
                   <label for="image" class="mt-4 mb-2">Image URl</label>
                   <input type="text" name="image" id="image" class="form-control form-control-lg font-16" />

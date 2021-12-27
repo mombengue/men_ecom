@@ -18,12 +18,12 @@ router.get('/ventes', (req, res) => {
 });
 
 router.get('/articles', (req, res) => {
-    res.render('pages/admin/articles');
+    let categories = await categorie.getCategories();
+    
+    res.render('pages/admin/articles', {categories});
 });
 
-router.post('/articles', (req, res) => {
-    console.log(req.name);
-});
+router.post('/articles', article.createArticle(req, res));
 
 router.get('/categories', (req, res) => {
     res.render('pages/admin/categories');

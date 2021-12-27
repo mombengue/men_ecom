@@ -1,6 +1,6 @@
 const Categorie = require('../database/categorieDatabase');
 
-const getCategories =  async (req, res) => {
+const getCategories =  async () => {
     try {
         let categories = await Categorie.find();
     
