@@ -1,33 +1,14 @@
-const express = require('express')
-const app = express()
-
-const router = express.Router()
 const article = require('../models/articleModels')
 const categorie = require('../models/categorieModels')
 const user = require('../models/userModels')
 
-const bcrypt = require('bcrypt')
-const passport = require('passport')
-const flash = require('express-flash')
-const session = require('express-session')
-const methodOverride = require('method-override')
+const User = require('../database/userDatabase')
 
-app.use(flash())
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-}))
-app.use(passport.initialize())
-app.use(passport.session())
-app.use(methodOverride('_method'))
+const express = require('express')
+const router = express.Router()
+const app = express()
 
-const initializePassport = require('../passport-config')
-initializePassport(
-    passport,
-    email => user.find(user => user.email === email),
-    id => user.find(user => user.id === id)
-)
+var passport = require('passport');
 
 router.get('/', async (req, res) => {
     let articles = await article.getArticles();
@@ -53,21 +34,5 @@ router.post('/connexion', passport.authenticate('local', {
         failureFlash: true
     })
 )
-
-function checkAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-      return next()
-    }
-    res.redirect('/connexion')
-} 
-  
-function checkNotAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-      return res.redirect('/admin')
-    }
-    next()
-}
-
-
 
 module.exports = router;
