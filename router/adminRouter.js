@@ -5,8 +5,12 @@ const article = require('../models/articleModels');
 const categorie = require('../models/categorieModels');
 const user = require('../models/userModels'); 
 
-router.get('/', (req, res) => {
-    res.render('pages/admin/dashboard');
+router.get('/', async (req, res) => {
+    let countUser = await user.getUsers();
+    let countCategorie = await categorie.getCategories();
+    let countArticle = await article.getArticles();
+
+    res.render('pages/admin/dashboard', {countUser, countArticle, countCategorie});
 });
 
 router.get('/utilisateurs', async (req, res) => {
