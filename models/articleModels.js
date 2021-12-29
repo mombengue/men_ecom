@@ -13,11 +13,8 @@ const getArticles =  async () => {
 const getArticle = async (req, res) => {
     try {
         const id = req.params.id;
-        
         const article = await Article.find({"_id" : id});
-        
         return article;
-        
     } catch (error) {
         console.log(error.message);
     }
@@ -25,12 +22,8 @@ const getArticle = async (req, res) => {
 
 const createArticle = async (req, res) => {
     try {
-        await Article.create(req.body);
-
-        const articles = await Article.find();
-    
+        let articles = await Article.create(req.body);
         return articles;
-        
     } catch (error) {
         console.log(error.message);
     }
@@ -39,13 +32,8 @@ const createArticle = async (req, res) => {
 const removeArticle = async (req, res) => {
     try {
         const id = req.params.ids
-
-        await Article.findOneAndDelete({"_id" : id});
-
-        const articles = await Article.find();
-    
-        res.send(articles);
-        
+        let articles = await Article.findOneAndDelete({"_id" : id});
+        return articles;
     } catch (error) {
         console.log(error.message);
     }
@@ -54,15 +42,10 @@ const removeArticle = async (req, res) => {
 const updateArticle = async (req, res) => {
     try {
         const id = req.params.id
-
-        await Article.findOneAndUpdate({"_id" : id}, { $set: { 
+        let articles = await Article.findOneAndUpdate({"_id" : id}, { $set: { 
             name: req.body.name 
         }});
-
-        const articles = await Article.find();
-    
-        res.send(articles);
-        
+        return articles;
     } catch (error) {
         console.log(error.message);
     }

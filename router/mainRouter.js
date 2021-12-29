@@ -16,8 +16,10 @@ router.get('/', async (req, res) => {
     res.render('pages/home', {articles});
 });
 
-router.get('/articles', (req, res) => {
-    res.render('pages/articles');
+router.get('/articles', async (req, res) => {
+    let articles = await article.getArticles();
+
+    res.render('pages/articles', {articles});
 });
 
 router.get('/a-propos', (req, res) => {

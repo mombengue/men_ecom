@@ -1,10 +1,9 @@
 const User = require('../database/userDatabase');
 
-const getUsers =  async (req, res) => {
+const getUsers =  async () => {
     try {
-        const users = await User.find();
-    
-        res.send(users);
+        let users = await User.find();
+        return users;
         
     } catch (error) {
         console.log(error.message);
@@ -14,11 +13,8 @@ const getUsers =  async (req, res) => {
 const getUser = async (req, res) => {
     try {
         const id = req.params.id;
-        
         const user = await User.find({"_id" : id});
-        
-        res.send(user);
-        
+        return user;
     } catch (error) {
         console.log(error.message);
     }
@@ -26,12 +22,8 @@ const getUser = async (req, res) => {
 
 const createUser = async (req, res) => {
     try {
-        await User.create(req.body);
-
-        const users = await User.find();
-    
-        res.send(users);
-        
+        let users = await User.create(req.body);
+        return users;
     } catch (error) {
         console.log(error.message);
     }
@@ -40,13 +32,8 @@ const createUser = async (req, res) => {
 const removeUser = async (req, res) => {
     try {
         const id = req.params.ids
-
-        await User.findOneAndDelete({"_id" : id});
-
-        const users = await User.find();
-    
-        res.send(users);
-        
+        let users = await User.findOneAndDelete({"_id" : id});
+        return users;
     } catch (error) {
         console.log(error.message);
     }
@@ -55,15 +42,10 @@ const removeUser = async (req, res) => {
 const updateUser = async (req, res) => {
     try {
         const id = req.params.id
-
-        await User.findOneAndUpdate({"_id" : id}, { $set: { 
+        let users = await User.findOneAndUpdate({"_id" : id}, { $set: { 
             name: req.body.name 
         }});
-
-        const users = await User.find();
-    
-        res.send(users);
-        
+        return users;
     } catch (error) {
         console.log(error.message);
     }
