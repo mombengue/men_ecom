@@ -55,19 +55,29 @@
             </div>
             <!-- Google Map -->
             <div class="col-md-6">
-              <h4 class="font-20 font-roboto dark-text text-capitalize mb-4">Liste des articles</h4>
+              <h4 class="font-20 font-roboto dark-text mb-4">Liste des articles</h4>
               <div class="row g-4">
-                <div class="col-lg-6">
-                  <div class="w3s-product-card card">
-                    <img src="https://sc04.alicdn.com/kf/HTB1N_MKLAzoK1RjSZFlq6yi4VXaL.jpg" class="img-fluid" alt="product" />
-                    <div class="w3s-product-info bg-white p-3">
-                      <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize">Blue Dress For Woman</h6>
-                      <div class="w3s-product-price">
-                          <span class="primary-text font-16 fw-bold">12000 FCFA</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <table class="table table-hover">
+                  <thead class="bg-dark text-white">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Image URL</th>
+                      <th scope="col">Prix</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% articles.forEach(article => { %>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td><%= article.name %></td>
+                      <td><%= article.image %></td>
+                      <td><%= article.prix %></td>
+                    </tr>
+                    <% }); %> 
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

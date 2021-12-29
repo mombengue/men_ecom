@@ -25,8 +25,9 @@ router.get('/ventes', (req, res) => {
 
 router.get('/articles', async (req, res) => {
     let categories = await categorie.getCategories();
+    let articles = await article.getArticles();
     
-    res.render('pages/admin/articles', {categories});
+    res.render('pages/admin/articles', {articles, categories});
 });
 
 router.post('/articles', async (req, res) => {
@@ -35,12 +36,15 @@ router.post('/articles', async (req, res) => {
     res.redirect('/admin/articles');
 });
 
-router.get('/categories', (req, res) => {
-    res.render('pages/admin/categories');
+router.get('/categories', async (req, res) => {
+    let categories = await categorie.getCategories();
+
+    res.render('pages/admin/categories', {categories});
 });
 
 router.post('/categories', async (req, res) => {
     categorie.createCategorie(req, res)
+    
     res.redirect('/admin/categories');
 });
 
