@@ -60,8 +60,14 @@
                       <% categories.forEach(categorie => { %>
                       <tr>
                         <th scope="row">1</th>
-                        <td><%= categorie.name %></td>
-                        <td></td>
+                        <td><%= categorie.name %></td><td>
+                          <a href="" class="me-4">
+                            <span class="text-primary">Editer</span>
+                          </a>
+                          <a href="">
+                            <span class="text-danger">Supprimer</span>
+                          </a>
+                        </td>
                       </tr>
                       <% }); %> 
                     </tbody>
