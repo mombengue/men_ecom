@@ -41,7 +41,6 @@ router.get('/categories', (req, res) => {
 
 router.post('/categories', async (req, res) => {
     categorie.createCategorie(req, res)
-
     res.redirect('/admin/categories');
 });
 
