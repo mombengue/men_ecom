@@ -30,11 +30,12 @@ router.get('/connexion', (req, res) => {
     res.render('pages/login');
 });
 
-router.post('/connexion', passport.authenticate('local', {
-        successRedirect: '/admin',
-        failureRedirect: '/connexion',
-        failureFlash: true
-    })
-)
+router.post('/connexion', passport.authenticate('local', 
+    {failureRedirect: '/admin', failureFlash: true }
+    ), (req, res) => {
+        req.flash("success", "Login Successful!");
+        res.redirect("/admin");
+    }
+);
 
 module.exports = router;

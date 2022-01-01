@@ -31,7 +31,7 @@ const createArticle = async (req, res) => {
 
 const removeArticle = async (req, res) => {
     try {
-        const id = req.params.ids
+        const id = req.params.id
         let articles = await Article.findOneAndDelete({"_id" : id});
         return articles;
     } catch (error) {

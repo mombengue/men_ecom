@@ -13,13 +13,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h3 class="font-28 font-roboto fw-bold mb-0">Utilisateurs</h3>
+              <h3 class="font-28 font-roboto fw-bold mb-0">Articles</h3>
             </div>
             <div class="col-md-6">
               <nav class="float-md-end mt-lg-0 mt-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a class="text-decoration-none link-hover dark-text font-14 font-poppins" href="/">Accueil</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Utilisateurs</li>
+                  <li class="breadcrumb-item active" aria-current="page">Articles</li>
                 </ol>
               </nav>
             </div>
@@ -34,18 +34,28 @@
           <div class="row g-5">
             <div class="col-md-6">
               <div class="contact-form">
-                <h4 class="font-20 font-roboto dark-text mb-4">Ajouter une categorie</h4>
+                <h4 class="font-20 font-roboto dark-text mb-4">Modifier article</h4>
                 <!-- Contact Form -->
-                <form action="/admin/categories" method="POST">
-                  <label for="name" class="mb-2">Nom de la categorie</label>
+                <form  action="/admin/article/<%= article._id %>?_method=PUT" method="POST">
+                  <label for="name" class="mb-2">Nom de l'article</label>
                   <input type="text" name="name" id="name" class="form-control form-control-lg font-16" />
+                  <label for="password" class="mt-4 mb-2">Categorie</label>
+                  <select id="categorie" name="categorie" placeholder="Selectionner une categorie" class="form-control form-control-lg font-16">
+                    <% categories.forEach(categorie => { %>
+                      <option value="<%= categorie._id %>"><%= categorie.name %></option>
+                    <% }); %> 
+                  </select>
+                  <label for="image" class="mt-4 mb-2">Image URl</label>
+                  <input type="text" name="image" id="image" class="form-control form-control-lg font-16" />
+                  <label for="prix" class="mt-4 mb-2">Prix</label>
+                  <input type="text" name="prix" id="prix" class="form-control form-control-lg font-16" />
                   <button type="submit" class="w3s-primary-btn mt-4 border-0">Enregistrer</button>
                 </form>
               </div>
             </div>
             <!-- Google Map -->
             <div class="col-md-6">
-              <h4 class="font-20 font-roboto dark-text mb-4">Liste des categories</h4>
+              <h4 class="font-20 font-roboto dark-text mb-4">Liste des articles</h4>
               <div class="row g-4">
                 <div class="table-responsive">
                   <table class="table table-hover">
@@ -53,18 +63,23 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nom</th>
+                        <th scope="col">Image URL</th>
+                        <th scope="col">Prix</th>
                         <th scope="col">Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <% categories.forEach(categorie => { %>
+                      <% articles.forEach(article => { %>
                       <tr>
                         <th scope="row">1</th>
+                        <td><%= article.name %></td>
+                        <td><%= article.image %></td>
+                        <td><%= article.prix %></td>
                         <td><%= categorie.name %></td><td>
-                          <a href="/admin/categorie/<%= categorie._id %>" class="me-4">
+                          <a href="/admin/article/<%= article._id %>" class="me-4">
                             <span class="text-primary">Editer</span>
                           </a>
-                          <form action="/admin/categorie/<%= categorie._id %>?_method=DELETE" method="POST">
+                          <form action="/admin/article/<%= article._id %>?_method=DELETE" method="POST">
                             <a type="submit">
                               <span class="text-danger">Supprimer</span>
                             </a>

@@ -31,7 +31,7 @@ const createUser = async (req, res) => {
 
 const removeUser = async (req, res) => {
     try {
-        const id = req.params.ids
+        const id = req.params.id
         let users = await User.findOneAndDelete({"_id" : id});
         return users;
     } catch (error) {

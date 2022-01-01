@@ -38,15 +38,54 @@ router.post('/articles', async (req, res) => {
     res.redirect('/admin/articles');
 });
 
+
+router.delete('/article/:id', (req, res) => {
+    article.removeArticle(req, res);
+
+    res.redirect('/admin/articles');
+});
+
+router.get('/article/:id', async (req, res) => {
+    let article = await article.getArticle(req, res);
+    let articles = await article.getArticles();
+
+    res.render('pages/admin/article', {article, articles});
+});
+
+router.put('/article/:id', (req, res) => {
+    article.updateArticle(req, res);
+
+    res.redirect('/admin/articles');
+});
+
 router.get('/categories', async (req, res) => {
     let categories = await categorie.getCategories();
 
     res.render('pages/admin/categories', {categories});
 });
 
-router.post('/categories', async (req, res) => {
+router.post('/categories', (req, res) => {
     categorie.createCategorie(req, res)
     
+    res.redirect('/admin/categories');
+});
+
+router.delete('/categorie/:id', (req, res) => {
+    categorie.removeCategorie(req, res);
+
+    res.redirect('/admin/categories');
+});
+
+router.get('/categorie/:id', async (req, res) => {
+    let categorie = await categorie.getCategorie(req, res);
+    let categories = await categorie.getCategories();
+
+    res.render('pages/admin/categorie', {categorie, categories});
+});
+
+router.put('/categorie/:id', (req, res) => {
+    categorie.updateCategorie(req, res);
+
     res.redirect('/admin/categories');
 });
 

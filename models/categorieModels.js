@@ -31,7 +31,7 @@ const createCategorie = async (req, res) => {
 
 const removeCategorie = async (req, res) => {
     try {
-        const id = req.params.ids
+        const id = req.params.id
         let categories = await Categorie.findOneAndDelete({"_id" : id});
         return categories;
     } catch (error) {
