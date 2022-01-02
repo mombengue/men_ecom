@@ -46,10 +46,11 @@ router.delete('/article/:id', (req, res) => {
 });
 
 router.get('/article/:id', async (req, res) => {
-    let article = await article.getArticle(req, res);
+    let editArticle = await article.getArticle(req, res);
     let articles = await article.getArticles();
+    let categories = await categorie.getCategories();
 
-    res.render('pages/admin/article', {article, articles});
+    res.render('pages/admin/article', {editArticle, articles, categories});
 });
 
 router.put('/article/:id', (req, res) => {
@@ -77,10 +78,10 @@ router.delete('/categorie/:id', (req, res) => {
 });
 
 router.get('/categorie/:id', async (req, res) => {
-    let categorie = await categorie.getCategorie(req, res);
+    let editCategorie = await categorie.getCategorie(req, res); 
     let categories = await categorie.getCategories();
 
-    res.render('pages/admin/categorie', {categorie, categories});
+    res.render('pages/admin/categorie', {editCategorie, categories});
 });
 
 router.put('/categorie/:id', (req, res) => {

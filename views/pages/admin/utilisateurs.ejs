@@ -9,7 +9,7 @@
     <%- include('../../partials/header_admin') %>
 
     <!-- Start Page Breadcrumb -->
-    <section class="w3s-breadcrumb bg-gray">
+    <section class="hj-breadcrumb bg-gray">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -29,7 +29,7 @@
       <!-- End Page Breadcrumb -->
     
       <!-- Start Contact Form -->
-      <section class="w3s-contact-section my-5 py-5">
+      <section class="hj-contact-section my-5 py-5">
         <div class="container">
           <div class="row g-5">
             <div class="col-md-6">
@@ -45,7 +45,7 @@
                   <input type="password" name="password" id="password" class="form-control form-control-lg font-16" />
                   <label for="phone" class="mt-4 mb-2">Telephone</label>
                   <input type="text" name="phone" id="phone" class="form-control form-control-lg font-16" />
-                  <button type="submit" class="w3s-primary-btn mt-4 border-0">Enregistrer</button>
+                  <button type="submit" class="hj-primary-btn mt-4 border-0">Enregistrer</button>
                 </form>
               </div>
             </div>
@@ -55,7 +55,7 @@
               <div class="row g-4">
                 <% users.forEach(user => { %>
                   <div class="col-12">
-                    <div class="w3s-address-info-box cursor-pointer card shadow rounded-3 border-0 py-4 px-3">
+                    <div class="hj-address-info-box cursor-pointer card shadow rounded-3 border-0 py-4 px-3">
                       <h3 class="font-20 fw-600 font-poppins dark-text text-capitalize text-center mb-3"><%= user.name %></h3>
                       <div class="d-flex justify-content-between">
                         <span>Email </span>

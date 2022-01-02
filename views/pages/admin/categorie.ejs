@@ -9,7 +9,7 @@
     <%- include('../../partials/header_admin') %>
 
     <!-- Start Page Breadcrumb -->
-    <section class="w3s-breadcrumb bg-gray">
+    <section class="hj-breadcrumb bg-gray">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -29,17 +29,17 @@
       <!-- End Page Breadcrumb -->
     
       <!-- Start Contact Form -->
-      <section class="w3s-contact-section my-5 py-5">
+      <section class="hj-contact-section my-5 py-5">
         <div class="container">
           <div class="row g-5">
             <div class="col-md-6">
               <div class="contact-form">
                 <h4 class="font-20 font-roboto dark-text mb-4">Modifier la categorie</h4>
                 <!-- Contact Form -->
-                <form  action="/admin/categorie/<%= categorie._id %>?_method=PUT" method="POST">
+                <form  action="/admin/categorie/<%= editCategorie._id %>?_method=PUT" method="POST">
                   <label for="name" class="mb-2">Nom de la categorie</label>
-                  <input type="text" name="name" id="name" class="form-control form-control-lg font-16" />
-                  <button type="submit" class="w3s-primary-btn mt-4 border-0">Enregistrer</button>
+                  <input type="text" name="name" id="name" value="<%= editCategorie.name %>" class="form-control form-control-lg font-16" />
+                  <button type="submit" class="hj-primary-btn mt-4 border-0">Enregistrer</button>
                 </form>
               </div>
             </div>

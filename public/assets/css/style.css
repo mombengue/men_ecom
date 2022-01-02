@@ -146,7 +146,7 @@
   cursor: pointer;
 }
 
-.w3s-pagination li .active {
+.hj-pagination li .active {
   background-color: #be9b57 !important;
   color: #ffffff !important;
 }
@@ -180,7 +180,7 @@ p {
           box-shadow: none !important;
 }
 
-.w3s-primary-btn {
+.hj-primary-btn {
   color: #ffffff;
   background: #be9b57;
   padding: 12px 35px;
@@ -192,12 +192,12 @@ p {
   z-index: 9;
 }
 
-.w3s-primary-btn:hover {
+.hj-primary-btn:hover {
   background: #be933f;
   color: #ffffff;
 }
 
-.w3s-dark-btn {
+.hj-dark-btn {
   outline: 0;
   border: 0;
   color: #ffffff;
@@ -210,19 +210,19 @@ p {
   border-right: 2px solid #ffffff;
 }
 
-.w3s-dark-btn:hover {
+.hj-dark-btn:hover {
   background-color: #202325;
 }
 
-.w3s-breadcrumb {
+.hj-breadcrumb {
   padding: 70px 0;
 }
 
-.w3s-breadcrumb .active {
+.hj-breadcrumb .active {
   color: #6c757d !important;
 }
 
-.w3s-sticky {
+.hj-sticky {
   position: fixed;
   top: 0;
   left: 0;
@@ -231,7 +231,7 @@ p {
   border-bottom: 1px solid #ddd;
 }
 
-.w3s-slider-section .w3s-slider-item {
+.hj-slider-section .hj-slider-item {
   min-height: 32rem;
   background: #777;
   color: #fff;
@@ -241,24 +241,24 @@ p {
   background-size: cover;
 }
 
-.w3s-slider-section .carousel-control-prev,
-.w3s-slider-section .carousel-control-next {
+.hj-slider-section .carousel-control-prev,
+.hj-slider-section .carousel-control-next {
   opacity: 0;
 }
 
-.w3s-slider-section .carousel-control-next:hover,
-.w3s-slider-section .carousel-control-prev:hover {
+.hj-slider-section .carousel-control-next:hover,
+.hj-slider-section .carousel-control-prev:hover {
   opacity: 1;
 }
 
-.w3s-slider-section .carousel-caption {
+.hj-slider-section .carousel-caption {
   top: 50%;
   left: 15%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.w3s-slider-section h1 {
+.hj-slider-section h1 {
   -webkit-animation: show-left-to-right 1s;
           animation: show-left-to-right 1s;
   -webkit-animation-delay: 0.5s;
@@ -270,7 +270,7 @@ p {
           transform: translateX(-100%);
 }
 
-.w3s-slider-section h2 {
+.hj-slider-section h2 {
   -webkit-animation: show-left-to-right 1s;
           animation: show-left-to-right 1s;
   -webkit-animation-delay: 0.9s;
@@ -282,7 +282,7 @@ p {
           transform: translateX(-100%);
 }
 
-.w3s-slider-section .w3s-primary-btn {
+.hj-slider-section .hj-primary-btn {
   -webkit-animation: show-left-to-right 1.5s;
           animation: show-left-to-right 1.5s;
   -webkit-animation-delay: .5s;
@@ -320,7 +320,7 @@ p {
   }
 }
 
-.w3s-shop-banner-section .w3s-banner-info {
+.hj-shop-banner-section .hj-banner-info {
   top: 50%;
   right: 0;
   padding: 20px;
@@ -329,7 +329,7 @@ p {
           transform: translateY(-50%);
 }
 
-.w3s-product-action-btn {
+.hj-product-action-btn {
   opacity: 0;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
@@ -337,34 +337,34 @@ p {
           animation-delay: 0.3s;
 }
 
-.w3s-product-card:hover .w3s-product-action-btn {
+.hj-product-card:hover .hj-product-action-btn {
   display: block !important;
   opacity: 1;
 }
 
-.w3s-product-card:hover .w3s-product-img img {
+.hj-product-card:hover .hj-product-img img {
   opacity: 0.8;
 }
 
-.w3s-product-badge {
+.hj-product-badge {
   top: 10px;
   left: 10px;
   z-index: 9;
 }
 
-.w3s-exclusive-product-section .mixitup-control-active {
+.hj-exclusive-product-section .mixitup-control-active {
   color: #be9b57 !important;
 }
 
-.w3s-tranding-banner-section .md-divider {
+.hj-tranding-banner-section .md-divider {
   height: 50px;
 }
 
-.w3s-tranding-banner-section .tranding-img {
+.hj-tranding-banner-section .tranding-img {
   margin-top: -90px;
 }
 
-.w3s-feature-product-section .owl-prev {
+.hj-feature-product-section .owl-prev {
   position: absolute;
   top: 50%;
   left: -20px;
@@ -372,7 +372,7 @@ p {
           transform: translateY(-50%);
 }
 
-.w3s-feature-product-section .owl-next {
+.hj-feature-product-section .owl-next {
   position: absolute;
   top: 50%;
   right: -20px;
@@ -380,31 +380,31 @@ p {
           transform: translateY(-50%);
 }
 
-.w3s-newsletter-section .newsletter-input {
+.hj-newsletter-section .newsletter-input {
   width: 70%;
   border-color: #be9b57;
   border-right: none;
 }
 
-.w3s-newsletter-section .newsletter-btn {
+.hj-newsletter-section .newsletter-btn {
   width: 30%;
   border-right: 2px solid #ffffff !important;
   border-color: #292b2c;
 }
 
-.w3s-newsletter-section .form-control-lg {
+.hj-newsletter-section .form-control-lg {
   padding: .7rem 1rem !important;
 }
 
-.w3s-footer .w3s-footer-widgets .w3s-footer-description {
+.hj-footer .hj-footer-widgets .hj-footer-description {
   width: 80%;
 }
 
-.w3s-footer .w3s-copyright {
+.hj-footer .hj-copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.w3s-contact-info-section .w3s-address-icon {
+.hj-contact-info-section .hj-address-icon {
   width: 80px;
   height: 80px;
   display: inline-block;
@@ -416,17 +416,17 @@ p {
   transition: background-color .5s ease-in;
 }
 
-.w3s-contact-info-section .w3s-address-info-box:hover .w3s-address-icon {
+.hj-contact-info-section .hj-address-info-box:hover .hj-address-icon {
   background: #be9b57;
   color: #ffffff !important;
 }
 
-.w3s-faq-section .accordion-button:not(.collapsed) {
+.hj-faq-section .accordion-button:not(.collapsed) {
   color: #292b2c !important;
   background-color: transparent !important;
 }
 
-.w3s-filter .active {
+.hj-filter .active {
   background: #be9b57;
   color: #ffffff !important;
 }
@@ -435,16 +435,16 @@ p {
   max-width: 768px
 ---------------------------------------------------*/
 @media only screen and (max-width: 768px) {
-  .w3s-tranding-banner-section .w3s-tranding-banner-info h2 {
+  .hj-tranding-banner-section .hj-tranding-banner-info h2 {
     font-size: 1.875rem;
   }
-  .w3s-newsletter-section h2 {
+  .hj-newsletter-section h2 {
     font-size: 1.75rem;
   }
-  .w3s-newsletter-section .newsletter-input {
+  .hj-newsletter-section .newsletter-input {
     width: 65%;
   }
-  .w3s-newsletter-section .newsletter-btn {
+  .hj-newsletter-section .newsletter-btn {
     width: 35%;
   }
 }
@@ -453,10 +453,10 @@ p {
   max-width: 480px
 ---------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-  .w3s-tranding-banner-section .tranding-img {
+  .hj-tranding-banner-section .tranding-img {
     margin-top: 30px;
   }
-  .w3s-testimonial-section .carousel-item p {
+  .hj-testimonial-section .carousel-item p {
     width: 90% !important;
     font-size: 14px;
   }

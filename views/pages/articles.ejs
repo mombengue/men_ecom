@@ -9,7 +9,7 @@
     <%- include('../partials/header') %>
 
     <!-- Start Page Breadcrumb -->
-    <section class="w3s-breadcrumb bg-gray">
+    <section class="hj-breadcrumb bg-gray">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -29,23 +29,23 @@
     <!-- End Page Breadcrumb -->
 
     <!-- Start Shop -->
-    <section class="w3s-faq-section mt-5 py-4">
+    <section class="hj-faq-section mt-5 py-4">
       <div class="container">
 
         <div class="row">
           <!-- Products -->
           <% articles.forEach(article => { %>
-            <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
-              <div class="w3s-product-card card">
-                <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
+            <div class="col-lg-3 col-sm-4 p-3 hj-product-item">
+              <div class="hj-product-card card">
+                <div class="hj-product-img overflow-hidden cursor-pointer position-relative bg-dark">
                   <img src="<%= article.image %>" class="img-fluid" alt="product" />
-                  <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
+                  <div class="hj-product-action-btn position-absolute top-50 start-50 translate-middle">
                     <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
                   </div>
                 </div>
-                <div class="w3s-product-info bg-white p-3">
+                <div class="hj-product-info bg-white p-3">
                   <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize"><%= article.name %></h6>
-                  <div class="w3s-product-price">
+                  <div class="hj-product-price">
                       <span class="primary-text font-16 fw-bold"><%= article.prix %> FCFA</span>
                   </div>
                 </div>
@@ -62,7 +62,7 @@
     
 
     <!-- Start News letter -->
-    <section class="w3s-newsletter-section bg-primary py-5 mt-5">
+    <section class="hj-newsletter-section bg-primary py-5 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6">

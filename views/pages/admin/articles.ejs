@@ -9,7 +9,7 @@
     <%- include('../../partials/header_admin') %>
 
     <!-- Start Page Breadcrumb -->
-    <section class="w3s-breadcrumb bg-gray">
+    <section class="hj-breadcrumb bg-gray">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -29,7 +29,7 @@
       <!-- End Page Breadcrumb -->
     
       <!-- Start Contact Form -->
-      <section class="w3s-contact-section my-5 py-5">
+      <section class="hj-contact-section my-5 py-5">
         <div class="container">
           <div class="row g-5">
             <div class="col-md-6">
@@ -49,7 +49,7 @@
                   <input type="text" name="image" id="image" class="form-control form-control-lg font-16" />
                   <label for="prix" class="mt-4 mb-2">Prix</label>
                   <input type="text" name="prix" id="prix" class="form-control form-control-lg font-16" />
-                  <button type="submit" class="w3s-primary-btn mt-4 border-0">Enregistrer</button>
+                  <button type="submit" class="hj-primary-btn mt-4 border-0">Enregistrer</button>
                 </form>
               </div>
             </div>
@@ -76,7 +76,7 @@
                         <td><%= article.image %></td>
                         <td><%= article.prix %></td>
                         <td>
-                          <a href="" class="me-4">
+                          <a href="/admin/article/<%= article._id %>" class="me-4">
                             <span class="text-primary">Editer</span>
                           </a>
                           <a href="">

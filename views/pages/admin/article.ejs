@@ -9,7 +9,7 @@
     <%- include('../../partials/header_admin') %>
 
     <!-- Start Page Breadcrumb -->
-    <section class="w3s-breadcrumb bg-gray">
+    <section class="hj-breadcrumb bg-gray">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -29,27 +29,28 @@
       <!-- End Page Breadcrumb -->
     
       <!-- Start Contact Form -->
-      <section class="w3s-contact-section my-5 py-5">
+      <section class="hj-contact-section my-5 py-5">
         <div class="container">
           <div class="row g-5">
             <div class="col-md-6">
               <div class="contact-form">
                 <h4 class="font-20 font-roboto dark-text mb-4">Modifier article</h4>
                 <!-- Contact Form -->
-                <form  action="/admin/article/<%= article._id %>?_method=PUT" method="POST">
+                <form  action="/admin/article/<%= editArticle._id %>?_method=PUT" method="POST">
                   <label for="name" class="mb-2">Nom de l'article</label>
-                  <input type="text" name="name" id="name" class="form-control form-control-lg font-16" />
+                  <input type="text" name="name" id="name" value="<%= editArticle.name %>" class="form-control form-control-lg font-16" />
                   <label for="password" class="mt-4 mb-2">Categorie</label>
                   <select id="categorie" name="categorie" placeholder="Selectionner une categorie" class="form-control form-control-lg font-16">
+                    <option value="<%= editArticle.categorie %>"><%= editArticle.categorie %></option>
                     <% categories.forEach(categorie => { %>
                       <option value="<%= categorie._id %>"><%= categorie.name %></option>
                     <% }); %> 
                   </select>
                   <label for="image" class="mt-4 mb-2">Image URl</label>
-                  <input type="text" name="image" id="image" class="form-control form-control-lg font-16" />
+                  <input type="text" name="image" id="image" value="<%= editArticle.image %>" class="form-control form-control-lg font-16" />
                   <label for="prix" class="mt-4 mb-2">Prix</label>
-                  <input type="text" name="prix" id="prix" class="form-control form-control-lg font-16" />
-                  <button type="submit" class="w3s-primary-btn mt-4 border-0">Enregistrer</button>
+                  <input type="text" name="prix" id="prix" value="<%= editArticle.prix %>" class="form-control form-control-lg font-16" />
+                  <button type="submit" class="hj-primary-btn mt-4 border-0">Enregistrer</button>
                 </form>
               </div>
             </div>
@@ -75,7 +76,7 @@
                         <td><%= article.name %></td>
                         <td><%= article.image %></td>
                         <td><%= article.prix %></td>
-                        <td><%= categorie.name %></td><td>
+                        <td>
                           <a href="/admin/article/<%= article._id %>" class="me-4">
                             <span class="text-primary">Editer</span>
                           </a>
