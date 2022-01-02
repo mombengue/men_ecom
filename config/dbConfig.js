@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const dbconnexion = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/hijab', () => {
+        await mongoose.connect(process.env.MONGO_URL, () => {
             console.log('Successfully connected to mongodb');
         });
     } 
